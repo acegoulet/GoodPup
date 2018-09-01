@@ -3,6 +3,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 def cocoa_pods
+  pod 'Firebase/Core'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 end
 

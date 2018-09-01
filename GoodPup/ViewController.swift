@@ -21,7 +21,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var goodDogView: UIView!
     @IBOutlet weak var toolBarSaveSpace: UIBarButtonItem!
     @IBOutlet weak var toolBarSaveButton: UIBarButtonItem!
+    @IBOutlet weak var goodPupWatermark: UIImageView!
+    @IBOutlet weak var loadBG: UIImageView!
     
+    let navBarLogo = UIImage(named: "GoodPup")
     
     let imagePickerCamera = UIImagePickerController()
     let imagePickerLibrary = UIImagePickerController()
@@ -47,9 +50,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         starView.isHidden = true
         starLabel.text = ""
+        goodPupWatermark.isHidden = true
         
         toolBarSaveSpace.isEnabled = false
         toolBarSaveButton.isEnabled = false
+        
+        let navBarLogoImageView = UIImageView(image:navBarLogo)
+        self.navigationItem.titleView = navBarLogoImageView
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -83,9 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let firstResult = results.first {
                 //print("ml result: \(firstResult.identifier)")
                 guard let navBar = self.navigationController?.navigationBar else { fatalError("no nav bar, bro") }
-                guard let titleColor = UIColor(hexString: "#434343") else { fatalError("no title color") }
-                navBar.barTintColor = UIColor(hexString: "#f2f2f2")
-                navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:titleColor]
+                navBar.barTintColor = UIColor(hexString: "#94A5E3")
                 self.resultLabel = self.negativeLabels[Int(arc4random_uniform(UInt32(self.negativeLabels.count)))]
                 self.positiveChecker = false
                 self.starView.isHidden = true
@@ -93,6 +98,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.defaultImage.isHidden = true
                 self.toolBarSaveSpace.isEnabled = false
                 self.toolBarSaveButton.isEnabled = false
+                self.goodPupWatermark.isHidden = true
+                self.loadBG.isHidden = true
+                let navBarLogoImageView = UIImageView(image:self.navBarLogo)
+                self.navigationItem.titleView = navBarLogoImageView
                 self.navigationItem.title = "GoodPup"
                 for breed in self.dogBreeds {
                     //print("array item: \(breed.lowercased())")
@@ -103,13 +112,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.positiveChecker = true
                         self.toolBarSaveSpace.isEnabled = true
                         self.toolBarSaveButton.isEnabled = true
+                        self.goodPupWatermark.isHidden = false
                         break
                     }
                 }
                 if self.positiveChecker == false {
-                    navBar.barTintColor = UIColor.flatRed
-                    navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.flatWhite]
-                    self.navigationItem.title = self.resultLabel
+                    navBar.barTintColor = UIColor(hexString: "#E56464")
+                    let errorNavView = UIView()
+                    let errorLabel = UILabel()
+                    errorLabel.text = self.resultLabel
+                    errorLabel.textColor = FlatWhite()
+                    errorLabel.font = errorLabel.font.withSize(22)
+                    errorLabel.sizeToFit()
+                    errorLabel.center = errorNavView.center
+                    errorNavView.addSubview(errorLabel)
+                    self.navigationItem.titleView = errorNavView
                 }
                 
             }

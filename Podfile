@@ -4,6 +4,8 @@ use_frameworks!
 
 def cocoa_pods
   pod 'Firebase/Core'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
 
 target 'GoodPup' do

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50219E55213B752D0060CD17 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50219E54213B752D0060CD17 /* LoadingViewController.swift */; };
 		50846454213A6D4D00B422C6 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 50846453213A6D4C00B422C6 /* MobileNet.mlmodel */; };
 		50BA73952139E5EE007F99B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA73942139E5EE007F99B2 /* AppDelegate.swift */; };
 		50BA73972139E5EE007F99B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA73962139E5EE007F99B2 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50219E54213B752D0060CD17 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		50846453213A6D4C00B422C6 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		50BA73912139E5EE007F99B2 /* GoodPup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodPup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BA73942139E5EE007F99B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				50BA73942139E5EE007F99B2 /* AppDelegate.swift */,
+				50219E54213B752D0060CD17 /* LoadingViewController.swift */,
 				50BA73962139E5EE007F99B2 /* ViewController.swift */,
 				50BA73982139E5EE007F99B2 /* Main.storyboard */,
 				50BA739B2139E5F2007F99B2 /* Assets.xcassets */,
@@ -169,15 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GoodPup-checkManifestLockResult.txt",
 			);
@@ -191,18 +190,18 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +219,7 @@
 				50846454213A6D4D00B422C6 /* MobileNet.mlmodel in Sources */,
 				50BA73972139E5EE007F99B2 /* ViewController.swift in Sources */,
 				50BA73952139E5EE007F99B2 /* AppDelegate.swift in Sources */,
+				50219E55213B752D0060CD17 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

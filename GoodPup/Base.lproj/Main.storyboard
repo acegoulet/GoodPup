@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="odu-kh-5B2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gC3-pM-fXs">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -86,12 +86,12 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="210" height="203"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-qk-nue">
-                                                <rect key="frame" x="37.666666666666686" y="50.999999999999986" width="135" height="101.00000000000001"/>
+                                                <rect key="frame" x="37.666666666666686" y="44.333333333333329" width="135" height="114.99999999999999"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="135" id="Wcg-ma-2wX"/>
-                                                    <constraint firstAttribute="height" constant="101" id="lwi-BJ-5ma"/>
+                                                    <constraint firstAttribute="height" constant="115" id="lwi-BJ-5ma"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -178,6 +178,44 @@
             </objects>
             <point key="canvasLocation" x="1078.2608695652175" y="132.88043478260872"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="UDV-ef-h8V">
+            <objects>
+                <viewController id="gC3-pM-fXs" customClass="LoadingViewController" customModule="GoodPup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05Y-eS-hh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="slJ-YF-Jfj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rc7-d9-uVQ">
+                                <rect key="frame" x="98" y="244" width="218" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="LJW-UB-Fx6"/>
+                                    <constraint firstAttribute="width" constant="218" id="cq7-Zo-Zdd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rc7-d9-uVQ" firstAttribute="centerY" secondItem="05Y-eS-hh6" secondAttribute="centerY" id="6Q2-D1-e10"/>
+                            <constraint firstItem="slJ-YF-Jfj" firstAttribute="leading" secondItem="05Y-eS-hh6" secondAttribute="leading" id="8Uq-IX-KBE"/>
+                            <constraint firstItem="slJ-YF-Jfj" firstAttribute="top" secondItem="05Y-eS-hh6" secondAttribute="top" id="GE2-HE-04S"/>
+                            <constraint firstItem="slJ-YF-Jfj" firstAttribute="trailing" secondItem="05Y-eS-hh6" secondAttribute="trailing" id="KnY-52-ObP"/>
+                            <constraint firstItem="Rc7-d9-uVQ" firstAttribute="centerX" secondItem="05Y-eS-hh6" secondAttribute="centerX" id="adx-bc-cnC"/>
+                            <constraint firstItem="slJ-YF-Jfj" firstAttribute="bottom" secondItem="05Y-eS-hh6" secondAttribute="bottom" id="j3T-Oi-2Mi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ni7-dz-XVu"/>
+                    </view>
+                    <connections>
+                        <segue destination="odu-kh-5B2" kind="show" identifier="loadScreenSegue" id="meu-HI-SE8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CQ-On-z6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="134"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oWR-LI-pQG">
             <objects>
@@ -206,5 +244,6 @@
         <image name="badge" width="196" height="203"/>
         <image name="bg" width="375" height="812"/>
         <image name="default-bg" width="176" height="269"/>
+        <image name="logo" width="213" height="242"/>
     </resources>
 </document>

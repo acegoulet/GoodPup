@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-ng-DHi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-ng-DHi" userLabel="Black BG">
                                 <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                                 <color key="backgroundColor" white="0.16216362847222221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -55,6 +55,24 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.36078431372549019" green="0.76862745098039209" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVh-Mi-OKC" userLabel="Error View">
+                                <rect key="frame" x="0.0" y="64" width="414" height="45.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exv-Cr-xOo">
+                                        <rect key="frame" x="8" y="8" width="398" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Exv-Cr-xOo" secondAttribute="trailing" constant="8" id="7KW-bE-gGm"/>
+                                    <constraint firstItem="Exv-Cr-xOo" firstAttribute="top" secondItem="vVh-Mi-OKC" secondAttribute="top" constant="8" id="AOD-j1-7f6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Exv-Cr-xOo" secondAttribute="bottom" constant="8" id="a93-i8-TMq"/>
+                                    <constraint firstItem="Exv-Cr-xOo" firstAttribute="leading" secondItem="vVh-Mi-OKC" secondAttribute="leading" constant="8" id="hZi-a9-z5o"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVw-S0-xKb">
                                 <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="516.66666666666652"/>
                                 <subviews>
@@ -116,6 +134,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jVd-K0-lAl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="00I-kQ-Wxg"/>
+                            <constraint firstItem="vVh-Mi-OKC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0V1-tG-Gml"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uel-lh-Vpz" secondAttribute="trailing" constant="37.5" id="3Me-1u-2Ei"/>
                             <constraint firstItem="xFS-kC-AY2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="5c8-QM-dRi"/>
                             <constraint firstItem="SVw-S0-xKb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7G1-8Z-xDZ"/>
@@ -123,22 +142,27 @@
                             <constraint firstItem="Uel-lh-Vpz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37.5" id="HVO-jz-vOf"/>
                             <constraint firstItem="jVd-K0-lAl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ij0-xm-cxd"/>
                             <constraint firstItem="xFS-kC-AY2" firstAttribute="top" secondItem="C5D-ng-DHi" secondAttribute="bottom" id="KLe-k1-mY4"/>
+                            <constraint firstItem="vVh-Mi-OKC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kts-jc-n3n"/>
                             <constraint firstItem="C5D-ng-DHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="NEC-kH-TZV"/>
                             <constraint firstItem="SVw-S0-xKb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SsZ-Fd-cCO"/>
                             <constraint firstItem="Uel-lh-Vpz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X3J-q8-vZB"/>
                             <constraint firstItem="C5D-ng-DHi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="XiB-QL-x4Q"/>
                             <constraint firstItem="SVw-S0-xKb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YD2-1n-QBY"/>
+                            <constraint firstItem="vVh-Mi-OKC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aLR-KI-mpv"/>
                             <constraint firstItem="jVd-K0-lAl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="azh-bU-mpH"/>
                             <constraint firstItem="xFS-kC-AY2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cpI-S7-WVg"/>
                             <constraint firstItem="SVw-S0-xKb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="keF-dM-NkF"/>
                             <constraint firstItem="xFS-kC-AY2" firstAttribute="top" secondItem="jVd-K0-lAl" secondAttribute="bottom" id="qPB-Uv-bte"/>
                             <constraint firstItem="C5D-ng-DHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="toP-Vt-MKr"/>
+                            <constraint firstItem="SVw-S0-xKb" firstAttribute="top" secondItem="vVh-Mi-OKC" secondAttribute="bottom" id="uhS-fU-GIo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="GoodPup" id="qMp-ba-2tt"/>
                     <connections>
                         <outlet property="defaultImage" destination="Uel-lh-Vpz" id="YDR-gW-bPb"/>
+                        <outlet property="errorLabel" destination="Exv-Cr-xOo" id="DAK-xH-V66"/>
+                        <outlet property="errorUIView" destination="vVh-Mi-OKC" id="gfI-Il-oBq"/>
                         <outlet property="goodDogView" destination="SVw-S0-xKb" id="1f6-gj-adY"/>
                         <outlet property="goodPupWatermark" destination="ihc-Dn-ITE" id="NXl-2k-ZVK"/>
                         <outlet property="imageView" destination="j73-WM-bWt" id="gzQ-Ci-Wfj"/>
@@ -152,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1078.2608695652175" y="132.88043478260872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oWR-LI-pQG">

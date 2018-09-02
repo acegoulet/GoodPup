@@ -14,12 +14,10 @@
 		50BA739C2139E5F2007F99B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BA739B2139E5F2007F99B2 /* Assets.xcassets */; };
 		50BA739F2139E5F2007F99B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BA739D2139E5F2007F99B2 /* LaunchScreen.storyboard */; };
 		50BA73AD213A427A007F99B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50BA73AC213A4279007F99B2 /* GoogleService-Info.plist */; };
-		94611575D8D396F3C45CD2AB /* Pods_GoodPup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11838BD80BA7FF6DEFB2EFCD /* Pods_GoodPup.framework */; };
+		B069B2183A1BE14B4D4D2372 /* Pods_GoodPup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D0BBC9AC6959B4B2D0874 /* Pods_GoodPup.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11838BD80BA7FF6DEFB2EFCD /* Pods_GoodPup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodPup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FA4DDC8316FFD3CFB8511E4 /* Pods-GoodPup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodPup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup.debug.xcconfig"; sourceTree = "<group>"; };
 		50846453213A6D4C00B422C6 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		50BA73912139E5EE007F99B2 /* GoodPup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodPup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BA73942139E5EE007F99B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +27,9 @@
 		50BA739E2139E5F2007F99B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BA73A02139E5F2007F99B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BA73AC213A4279007F99B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		67461438FF9BC01F5CA53CE9 /* Pods-GoodPup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodPup.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup.release.xcconfig"; sourceTree = "<group>"; };
+		5D4D0BBC9AC6959B4B2D0874 /* Pods_GoodPup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodPup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBC7753039429A4C99F2FD2 /* Pods-GoodPup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodPup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup.debug.xcconfig"; sourceTree = "<group>"; };
+		E391F389C311F9F59F0A3CF2 /* Pods-GoodPup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodPup.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,28 +37,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94611575D8D396F3C45CD2AB /* Pods_GoodPup.framework in Frameworks */,
+				B069B2183A1BE14B4D4D2372 /* Pods_GoodPup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F8EE6C688A6499F50A28837 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				11838BD80BA7FF6DEFB2EFCD /* Pods_GoodPup.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		50BA73882139E5EE007F99B2 = {
 			isa = PBXGroup;
 			children = (
 				50BA73932139E5EE007F99B2 /* GoodPup */,
 				50BA73922139E5EE007F99B2 /* Products */,
-				B08D3944CB14349E6E7B98DB /* Pods */,
-				1F8EE6C688A6499F50A28837 /* Frameworks */,
+				D9A390F72244D8D1238CE3E5 /* Pods */,
+				EA3514A6DAF3266AF9088ED0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,13 +77,21 @@
 			path = GoodPup;
 			sourceTree = "<group>";
 		};
-		B08D3944CB14349E6E7B98DB /* Pods */ = {
+		D9A390F72244D8D1238CE3E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3FA4DDC8316FFD3CFB8511E4 /* Pods-GoodPup.debug.xcconfig */,
-				67461438FF9BC01F5CA53CE9 /* Pods-GoodPup.release.xcconfig */,
+				6FBC7753039429A4C99F2FD2 /* Pods-GoodPup.debug.xcconfig */,
+				E391F389C311F9F59F0A3CF2 /* Pods-GoodPup.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA3514A6DAF3266AF9088ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D4D0BBC9AC6959B4B2D0874 /* Pods_GoodPup.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,11 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50BA73A32139E5F2007F99B2 /* Build configuration list for PBXNativeTarget "GoodPup" */;
 			buildPhases = (
-				7E72E8745E96B3589D2E2ADD /* [CP] Check Pods Manifest.lock */,
+				798A8474E6B97D67FB542FC4 /* [CP] Check Pods Manifest.lock */,
 				50BA738D2139E5EE007F99B2 /* Sources */,
 				50BA738E2139E5EE007F99B2 /* Frameworks */,
 				50BA738F2139E5EE007F99B2 /* Resources */,
-				42C4AA8EA687F8EFF8611D18 /* [CP] Embed Pods Frameworks */,
+				C7EE9FD1FDD17F7E24AEC8C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,44 +164,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42C4AA8EA687F8EFF8611D18 /* [CP] Embed Pods Frameworks */ = {
+		798A8474E6B97D67FB542FC4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E72E8745E96B3589D2E2ADD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GoodPup-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EE9FD1FDD17F7E24AEC8C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoodPup/Pods-GoodPup-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -355,7 +361,7 @@
 		};
 		50BA73A42139E5F2007F99B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FA4DDC8316FFD3CFB8511E4 /* Pods-GoodPup.debug.xcconfig */;
+			baseConfigurationReference = 6FBC7753039429A4C99F2FD2 /* Pods-GoodPup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,7 +380,7 @@
 		};
 		50BA73A52139E5F2007F99B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67461438FF9BC01F5CA53CE9 /* Pods-GoodPup.release.xcconfig */;
+			baseConfigurationReference = E391F389C311F9F59F0A3CF2 /* Pods-GoodPup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

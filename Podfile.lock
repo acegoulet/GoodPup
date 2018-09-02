@@ -46,11 +46,15 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Core
+  - NVActivityIndicatorView
   - SwiftyJSON
 
 SPEC REPOS:
@@ -63,6 +67,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
+    - NVActivityIndicatorView
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -74,8 +79,9 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 5b15bfbd6024bc64c52f2222c45b918e73d08bc7
+PODFILE CHECKSUM: c2d635c5a5b174fb8b95e94271d746e11aac0b7f
 
 COCOAPODS: 1.5.3

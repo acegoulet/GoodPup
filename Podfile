@@ -6,6 +6,7 @@ def cocoa_pods
   pod 'Firebase/Core'
   pod 'SwiftyJSON'
   pod 'Alamofire'
+  pod "NVActivityIndicatorView"
 end
 
 target 'GoodPup' do

@@ -32,11 +32,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var resultLabel = ""
     var positiveChecker = false
     
-    var starBadgePanGesture = UIPanGestureRecognizer()
-    var starViewStartHeight : CGFloat = 0.0
-    var starViewStartWidth : CGFloat = 0.0
-    var starViewStartPoint = CGPoint(x: 0.0, y: 0.0)
-    var lastRotation: CGFloat = 0
+//    var starViewStartHeight : CGFloat = 0.0
+//    var starViewStartWidth : CGFloat = 0.0
+//    var starViewStartPoint = CGPoint(x: 0.0, y: 0.0)
+//    var lastRotation: CGFloat = 0
     
     let defaults = UserDefaults.standard
     
@@ -73,14 +72,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         starLabel.text = ""
         goodPupWatermark.isHidden = true
         
-        //gestures and manipulations with Star badge
-        starBadgePanGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.draggedView(_:)))
-        starView.isUserInteractionEnabled = true
-        starView.addGestureRecognizer(starBadgePanGesture)
-        
-        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(rotatedView(_:)))
-        starView.addGestureRecognizer(rotate)
-        
         errorUIView.isHidden = true
         
         toolBarSaveButton.isEnabled = false
@@ -89,9 +80,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.navigationItem.titleView = navBarLogoImageView
         
         //Get initial position and size of starview
-        starViewStartHeight = starView.frame.size.height
-        starViewStartWidth = starView.frame.size.width
-        starViewStartPoint = CGPoint(x: (starView.center.x - (starViewStartWidth / 5)), y: starView.center.y)
+//        starViewStartHeight = starView.frame.size.height
+//        starViewStartWidth = starView.frame.size.width
+//        starViewStartPoint = CGPoint(x: (starView.center.x - (starViewStartWidth / 5)), y: starView.center.y)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -126,7 +117,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 //print("ml result: \(firstResult.identifier)")
                 
                 //reset position of star badge
-                self.starView.center = self.starViewStartPoint
+                //self.starView.center = self.starViewStartPoint
                 
                 self.positiveChecker = false
                 self.errorUIView.isHidden = true
@@ -182,30 +173,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //MARK: - Star Badge Manipulations
-    @objc func draggedView(_ sender:UIPanGestureRecognizer){
-        self.view.bringSubview(toFront: starView)
-        let translation = sender.translation(in: self.view)
-        if(starView.center.x + translation.x < goodDogView.bounds.maxX && starView.center.x + translation.x > goodDogView.bounds.minX && starView.center.y + translation.y < goodDogView.bounds.maxY && starView.center.y + translation.y > goodDogView.bounds.minY){
-            starView.center = CGPoint(x: starView.center.x + translation.x, y: starView.center.y + translation.y)
-            sender.setTranslation(CGPoint.zero, in: self.view)
+    
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        if let view = recognizer.view {
+            if(view.center.x + translation.x < goodDogView.bounds.maxX && view.center.x + translation.x > goodDogView.bounds.minX && view.center.y + translation.y < goodDogView.bounds.maxY && view.center.y + translation.y > goodDogView.bounds.minY){
+                view.center = CGPoint(x:view.center.x + translation.x, y:view.center.y + translation.y)
+            }
+        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+    }
+    
+    @IBAction func handlePinch(recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+            recognizer.scale = 1
         }
     }
     
-    @objc func rotatedView(_ sender: UIRotationGestureRecognizer) {
-        var originalRotation = CGFloat()
-        if sender.state == .began {
-            print("begin")
-            sender.rotation = lastRotation
-            originalRotation = sender.rotation
-        } else if sender.state == .changed {
-            print("changing")
-            let newRotation = sender.rotation + originalRotation
-            sender.view?.transform = CGAffineTransform(rotationAngle: newRotation)
-        } else if sender.state == .ended {
-            print("end")
-            lastRotation = sender.rotation
+    @IBAction func handleRotate(recognizer : UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.rotated(by: recognizer.rotation)
+            recognizer.rotation = 0
         }
     }
+    
+    
+//    @objc func draggedView(_ sender:UIPanGestureRecognizer){
+//        self.view.bringSubview(toFront: starView)
+//        let translation = sender.translation(in: self.view)
+//        if(starView.center.x + translation.x < goodDogView.bounds.maxX && starView.center.x + translation.x > goodDogView.bounds.minX && starView.center.y + translation.y < goodDogView.bounds.maxY && starView.center.y + translation.y > goodDogView.bounds.minY){
+//            starView.center = CGPoint(x: starView.center.x + translation.x, y: starView.center.y + translation.y)
+//            sender.setTranslation(CGPoint.zero, in: self.view)
+//        }
+//    }
+//
+//    @objc func rotatedView(_ sender: UIRotationGestureRecognizer) {
+//        var originalRotation = CGFloat()
+//        if sender.state == .began {
+//            sender.rotation = lastRotation
+//            originalRotation = sender.rotation
+//        } else if sender.state == .changed {
+//            let newRotation = sender.rotation + originalRotation
+//            sender.view?.transform = CGAffineTransform(rotationAngle: newRotation)
+//        } else if sender.state == .ended {
+//            lastRotation = sender.rotation
+//        }
+//    }
+//
+//    @objc func resizedView(_ sender: UIPinchGestureRecognizer){
+//        print("resize")
+//        starView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+//    }
     
     
     //MARK: - Saving Image
@@ -228,5 +247,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             present(ac, animated: true)
         }
     }
+}
+
+extension ViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
 }
 

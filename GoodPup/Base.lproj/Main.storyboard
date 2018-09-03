@@ -53,7 +53,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KX-nv-1pA">
                                         <rect key="frame" x="226" y="-10" width="210" height="203"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-Lg-uC2">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-Lg-uC2">
                                                 <rect key="frame" x="0.0" y="0.0" width="210" height="203"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-qk-nue">
@@ -77,6 +77,11 @@
                                             <constraint firstItem="MVJ-qk-nue" firstAttribute="centerY" secondItem="7KX-nv-1pA" secondAttribute="centerY" id="l8R-gt-kGw"/>
                                             <constraint firstAttribute="height" constant="203" id="oGT-Cw-ktW"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Tvk-Ak-olz" appends="YES" id="3Tl-2v-kbY"/>
+                                            <outletCollection property="gestureRecognizers" destination="Mu0-Tc-Moz" appends="YES" id="DZx-YM-B2a"/>
+                                            <outletCollection property="gestureRecognizers" destination="mAW-vb-JVv" appends="YES" id="osq-A9-NXv"/>
+                                        </connections>
                                     </view>
                                     <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoodPup" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-Dn-ITE">
                                         <rect key="frame" x="8" y="484.66666666666669" width="106" height="24"/>
@@ -175,6 +180,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Tvk-Ak-olz">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="wxf-gh-FlM"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="P1E-DK-pD2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="Mu0-Tc-Moz">
+                    <connections>
+                        <action selector="handleRotateWithRecognizer:" destination="BYZ-38-t0r" id="0gc-Co-oH5"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="R08-17-dnV"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="mAW-vb-JVv">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="HSt-9d-GGF"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="a9W-Px-IxJ"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1078.2608695652175" y="132.88043478260872"/>
         </scene>

@@ -26,35 +26,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-K0-lAl">
                                 <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-kC-AY2">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8jK-h3-2SO"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="flexibleSpace" id="tXK-sj-AFx"/>
-                                    <barButtonItem systemItem="camera" id="KPC-YB-QhO">
-                                        <connections>
-                                            <action selector="cameraTapped:" destination="BYZ-38-t0r" id="yvn-zr-xJC"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="D6S-xe-TOi"/>
-                                    <barButtonItem systemItem="organize" id="x96-Ec-joj">
-                                        <connections>
-                                            <action selector="libraryTapped:" destination="BYZ-38-t0r" id="eCt-vF-2Hp"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="dQX-Dh-gI0"/>
-                                    <barButtonItem systemItem="action" id="jt8-aa-dwB">
-                                        <connections>
-                                            <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="l3U-hz-p0G"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="gbL-cS-SR9"/>
-                                </items>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="0.36078431372549019" green="0.76862745098039209" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVh-Mi-OKC" userLabel="Error View">
                                 <rect key="frame" x="0.0" y="64" width="414" height="45.666666666666657"/>
                                 <subviews>
@@ -85,13 +56,13 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-Lg-uC2">
                                                 <rect key="frame" x="0.0" y="0.0" width="210" height="203"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-qk-nue">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-qk-nue">
                                                 <rect key="frame" x="37.666666666666686" y="44.333333333333329" width="135" height="114.99999999999999"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="135" id="Wcg-ma-2wX"/>
                                                     <constraint firstAttribute="height" constant="115" id="lwi-BJ-5ma"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -130,6 +101,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uel-lh-Vpz">
                                 <rect key="frame" x="37" y="233.66666666666663" width="339.66666666666669" height="269"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-kC-AY2">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8jK-h3-2SO"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="tXK-sj-AFx"/>
+                                    <barButtonItem systemItem="camera" id="KPC-YB-QhO">
+                                        <connections>
+                                            <action selector="cameraTapped:" destination="BYZ-38-t0r" id="yvn-zr-xJC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="D6S-xe-TOi"/>
+                                    <barButtonItem systemItem="organize" id="x96-Ec-joj">
+                                        <connections>
+                                            <action selector="libraryTapped:" destination="BYZ-38-t0r" id="eCt-vF-2Hp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="dQX-Dh-gI0"/>
+                                    <barButtonItem systemItem="action" id="jt8-aa-dwB">
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="l3U-hz-p0G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="gbL-cS-SR9"/>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.36078431372549019" green="0.76862745098039209" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

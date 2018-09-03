@@ -32,12 +32,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var resultLabel = ""
     var positiveChecker = false
     
+    var starBadgePanGesture = UIPanGestureRecognizer()
+    var starViewStartHeight : CGFloat = 0.0
+    var starViewStartWidth : CGFloat = 0.0
+    var starViewStartPoint = CGPoint(x: 0.0, y: 0.0)
+    var lastRotation: CGFloat = 0
+    
     let defaults = UserDefaults.standard
     
     var dogBreeds = [String]()
     
     var positiveLabels = [String]()
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,12 +73,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         starLabel.text = ""
         goodPupWatermark.isHidden = true
         
+        //gestures and manipulations with Star badge
+        starBadgePanGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.draggedView(_:)))
+        starView.isUserInteractionEnabled = true
+        starView.addGestureRecognizer(starBadgePanGesture)
+        
+        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(rotatedView(_:)))
+        starView.addGestureRecognizer(rotate)
+        
         errorUIView.isHidden = true
         
         toolBarSaveButton.isEnabled = false
         
         let navBarLogoImageView = UIImageView(image:navBarLogo)
         self.navigationItem.titleView = navBarLogoImageView
+        
+        //Get initial position and size of starview
+        starViewStartHeight = starView.frame.size.height
+        starViewStartWidth = starView.frame.size.width
+        starViewStartPoint = CGPoint(x: (starView.center.x - (starViewStartWidth / 5)), y: starView.center.y)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -104,6 +124,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //print(results)
             if let firstResult = results.first {
                 //print("ml result: \(firstResult.identifier)")
+                
+                //reset position of star badge
+                self.starView.center = self.starViewStartPoint
+                
                 self.positiveChecker = false
                 self.errorUIView.isHidden = true
                 self.starView.isHidden = true
@@ -156,6 +180,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func libraryTapped(_ sender: UIBarButtonItem) {
         present(imagePickerLibrary, animated: true, completion: nil)
     }
+    
+    //MARK: - Star Badge Manipulations
+    @objc func draggedView(_ sender:UIPanGestureRecognizer){
+        self.view.bringSubview(toFront: starView)
+        let translation = sender.translation(in: self.view)
+        if(starView.center.x + translation.x < goodDogView.bounds.maxX && starView.center.x + translation.x > goodDogView.bounds.minX && starView.center.y + translation.y < goodDogView.bounds.maxY && starView.center.y + translation.y > goodDogView.bounds.minY){
+            starView.center = CGPoint(x: starView.center.x + translation.x, y: starView.center.y + translation.y)
+            sender.setTranslation(CGPoint.zero, in: self.view)
+        }
+    }
+    
+    @objc func rotatedView(_ sender: UIRotationGestureRecognizer) {
+        var originalRotation = CGFloat()
+        if sender.state == .began {
+            print("begin")
+            sender.rotation = lastRotation
+            originalRotation = sender.rotation
+        } else if sender.state == .changed {
+            print("changing")
+            let newRotation = sender.rotation + originalRotation
+            sender.view?.transform = CGAffineTransform(rotationAngle: newRotation)
+        } else if sender.state == .ended {
+            print("end")
+            lastRotation = sender.rotation
+        }
+    }
+    
     
     //MARK: - Saving Image
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {

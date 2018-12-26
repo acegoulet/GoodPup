@@ -23,7 +23,7 @@
 		50219E54213B752D0060CD17 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		50219E56213B94D40060CD17 /* GoodPupActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodPupActivityIndicatorView.swift; sourceTree = "<group>"; };
 		50846453213A6D4C00B422C6 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
-		50BA73912139E5EE007F99B2 /* GoodPup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodPup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BA73912139E5EE007F99B2 /* GoodDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BA73942139E5EE007F99B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BA73962139E5EE007F99B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50BA73992139E5EE007F99B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		50BA73922139E5EE007F99B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50BA73912139E5EE007F99B2 /* GoodPup.app */,
+				50BA73912139E5EE007F99B2 /* GoodDog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50BA73902139E5EE007F99B2 /* GoodPup */ = {
+		50BA73902139E5EE007F99B2 /* GoodDog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50BA73A32139E5F2007F99B2 /* Build configuration list for PBXNativeTarget "GoodPup" */;
+			buildConfigurationList = 50BA73A32139E5F2007F99B2 /* Build configuration list for PBXNativeTarget "GoodDog" */;
 			buildPhases = (
 				798A8474E6B97D67FB542FC4 /* [CP] Check Pods Manifest.lock */,
 				50BA738D2139E5EE007F99B2 /* Sources */,
@@ -117,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = GoodPup;
+			name = GoodDog;
 			productName = "Let'sBeFrank";
-			productReference = 50BA73912139E5EE007F99B2 /* GoodPup.app */;
+			productReference = 50BA73912139E5EE007F99B2 /* GoodDog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,6 +134,7 @@
 				TargetAttributes = {
 					50BA73902139E5EE007F99B2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -150,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50BA73902139E5EE007F99B2 /* GoodPup */,
+				50BA73902139E5EE007F99B2 /* GoodDog */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.acegoulet.GoodPup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -398,7 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.acegoulet.GoodPup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -415,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50BA73A32139E5F2007F99B2 /* Build configuration list for PBXNativeTarget "GoodPup" */ = {
+		50BA73A32139E5F2007F99B2 /* Build configuration list for PBXNativeTarget "GoodDog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50BA73A42139E5F2007F99B2 /* Debug */,

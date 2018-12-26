@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gC3-pM-fXs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gC3-pM-fXs">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GoodPup-->
+        <!--GoodDog-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoodPup" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="45.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Exv-Cr-xOo">
-                                        <rect key="frame" x="8" y="14.333333333333329" width="398" height="18"/>
+                                        <rect key="frame" x="8" y="14" width="398" height="18"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -103,7 +102,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uel-lh-Vpz">
-                                <rect key="frame" x="37" y="233.66666666666663" width="339.66666666666669" height="269"/>
+                                <rect key="frame" x="37.666666666666657" y="233.66666666666663" width="339" height="269"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-kC-AY2">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
@@ -162,7 +161,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="GoodPup" id="qMp-ba-2tt"/>
+                    <navigationItem key="navigationItem" title="GoodDog" id="qMp-ba-2tt"/>
                     <connections>
                         <outlet property="defaultImage" destination="Uel-lh-Vpz" id="YDR-gW-bPb"/>
                         <outlet property="errorLabel" destination="Exv-Cr-xOo" id="DAK-xH-V66"/>
@@ -262,10 +261,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GoodPup" width="106" height="22"/>
-        <image name="badge" width="196" height="203"/>
+        <image name="GoodPup" width="106.33333587646484" height="22.333333969116211"/>
+        <image name="badge" width="196.66667175292969" height="203.66667175292969"/>
         <image name="bg" width="375" height="812"/>
-        <image name="default-bg" width="176" height="269"/>
-        <image name="logo" width="213" height="242"/>
+        <image name="default-bg" width="176.66667175292969" height="269.66665649414062"/>
+        <image name="logo" width="213" height="238.66667175292969"/>
     </resources>
 </document>

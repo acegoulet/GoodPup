@@ -61,7 +61,7 @@ class LoadingViewController: UIViewController {
         super.viewDidAppear(true)
         //goToMainView()
         
-        activityIndicator.superview?.bringSubview(toFront: activityIndicator)
+        activityIndicator.superview?.bringSubviewToFront(activityIndicator)
     }
     
     
